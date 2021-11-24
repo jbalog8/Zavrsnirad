@@ -19,12 +19,12 @@ create table zaposlenici(
     ime varchar(50),
     prezime varchar(50),
     oib char(11),
-    odijeli int,
+    odjeli int,
     evidencija int
 
 );
 
-create table odijeli(
+create table odjeli(
     sifra int not null primary key auto_increment,
     naziv varchar(50)
 );
@@ -40,5 +40,5 @@ create table vrstarada(
 
 
 alter table zaposlenici add foreign key (evidencija) references evidencija(sifra);
-alter table zaposlenici add foreign key (odijeli)  references odijeli(sifra);
+alter table zaposlenici add foreign key (odjeli)  references odjeli(sifra);
 alter table evidencija add foreign key(vrstarada) references vrstarada(sifra);
