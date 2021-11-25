@@ -42,3 +42,14 @@ create table vrstarada(
 alter table zaposlenici add foreign key (evidencija) references evidencija(sifra);
 alter table zaposlenici add foreign key (odjeli)  references odjeli(sifra);
 alter table evidencija add foreign key(vrstarada) references vrstarada(sifra);
+
+
+#select *from odjeli;
+#insert into odjeli(sifra,naziv)
+#values(null,'Uprava');
+#insert into odjeli (sifra,naziv)
+#values (null,'Odjel prodaje'), (null,'Odjel nabave'), (null,'Odjel proizvodnje'), (null,'Odjel ljuduskih resursa'), (null,'Odjel financija');
+
+#select * from zaposlenici;
+#insert into zaposlenici(sifra, ime, prezime,oib)
+#values(null,'Josip','Balog', 48875091792)
