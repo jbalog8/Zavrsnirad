@@ -34,8 +34,8 @@ create table vrstarada(
     sifra int not null primary key auto_increment,
     redovanrad int,
     prekovremenirad int,
-    terenskirad int,
-    radodkuce int
+    terenskirad int
+    
 );
 
 
