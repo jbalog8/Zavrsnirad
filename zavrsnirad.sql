@@ -79,3 +79,13 @@ alter table evidencija add foreign key(vrste_rada) references vrste_rada(sifra);
 #(null,'Noa','Novak',51910380548) 
 #(null,'Filip','Martinović',95227831197) 
 #(null,'Fran','Petrović',23836264703)
+
+#select * from zaposlenici;
+#describe zaposlenici;
+#describe odjeli;
+#describe evidencija;
+#describe vrste_rada;
+
+#select * from vrste_rada;
+#insert into vrste_rada (sifra,naziv_rada)
+#values(null,'Redovan_rad'),(null,'Prekovremeni_rad'),(null,'Terenski_rad');
