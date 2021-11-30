@@ -9,7 +9,7 @@ create table evidencija(
     datum date not null,
     prijava boolean,
     zaposlenici int,
-    vrstarada int
+    vrste_rada int
 );
 
 
@@ -19,8 +19,9 @@ create table zaposlenici(
     ime varchar(50),
     prezime varchar(50),
     oib char(11),
-    odjeli int,
-    evidencija int
+    broj_kartice int,
+    odjeli int
+   
 
 );
 
@@ -30,18 +31,16 @@ create table odjeli(
 );
 
 
-create table vrstarada(
+create table vrste_rada(
     sifra int not null primary key auto_increment,
-    redovanrad int,
-    prekovremenirad int,
-    terenskirad int
+    naziv_rada varchar(50)
     
 );
 
 
-alter table zaposlenici add foreign key (evidencija) references evidencija(sifra);
+alter table evidencija add foreign key (zaposlenici) references zaposlenici(sifra);
 alter table zaposlenici add foreign key (odjeli)  references odjeli(sifra);
-alter table evidencija add foreign key(vrstarada) references vrstarada(sifra);
+alter table evidencija add foreign key(vrste_rada) references vrste_rada(sifra);
 
 
 
