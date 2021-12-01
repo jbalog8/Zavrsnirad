@@ -53,7 +53,16 @@ alter table evidencija add foreign key(vrste_rada) references vrste_rada(sifra);
 
 #select * from zaposlenici;
 #insert into zaposlenici(sifra, ime, prezime,oib)
-#values(null,'Josip','Balog', 48875091792)
+#values(null,'Josip','Balog', 48875091792);
+
+#update zaposlenici
+#set odjeli =1
+#where sifra =1;
+
+#select a.ime, a.prezime, b.naziv 
+#from zaposlenici a
+#inner join odjeli b on a.odjeli = b.sifra;
+
 
 
 #select * from zaposlenici;
