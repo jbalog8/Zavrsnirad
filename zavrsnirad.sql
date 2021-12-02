@@ -4,7 +4,7 @@ create database evidencija character set utf8;
 use evidencija;
 
 
-create table evidencija(
+create table evidencije(
     sifra int primary key auto_increment,
     datum date not null,
     prijava boolean,
@@ -38,9 +38,9 @@ create table vrste_rada(
 );
 
 
-alter table evidencija add foreign key (zaposlenici) references zaposlenici(sifra);
+alter table evidencije add foreign key (zaposlenici) references zaposlenici(sifra);
 alter table zaposlenici add foreign key (odjeli)  references odjeli(sifra);
-alter table evidencija add foreign key(vrste_rada) references vrste_rada(sifra);
+alter table evidencije add foreign key(vrste_rada) references vrste_rada(sifra);
 
 
 
