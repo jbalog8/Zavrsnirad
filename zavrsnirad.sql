@@ -66,7 +66,7 @@ alter table evidencije add foreign key(vrste_rada) references vrste_rada(sifra);
 
 
 #select * from zaposlenici;
-#insert into zaposlenici(sifra, ime, prezime,oib)
+#insert into zaposlenici(sifra, ime, prezime,oib,odjeli)
 #values
 #(null,'Mia', 'Knežević',47993811262)
 #(null,'Lucija','Horvat',39434338223) 
@@ -92,7 +92,7 @@ alter table evidencije add foreign key(vrste_rada) references vrste_rada(sifra);
 #select * from zaposlenici;
 #describe zaposlenici;
 #describe odjeli;
-#describe evidencija;
+#describe evidencije;
 #describe vrste_rada;
 
 #select * from vrste_rada;
